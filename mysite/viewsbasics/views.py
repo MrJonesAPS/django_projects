@@ -2,7 +2,8 @@ from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from django.utils.html import escape
 from random import choice
-
+from django.views import View
+from django.shortcuts import render
 
 def funktionally(request):
     response = """<!DOCTYPE html>
@@ -180,6 +181,11 @@ def prettyurldata(request, thing):
     """
     return HttpResponse(response)
 
+class Icecream(View):
+    def get(self, request,flavor=""):
+        #flavor = request.GET.get('flavor')
+        x = {'flavor':flavor}
+        return render(request, 'viewsbasics/icecream.html',x)
 
 def bounce(request):
     places = [

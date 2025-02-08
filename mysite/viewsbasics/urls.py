@@ -11,4 +11,6 @@ urlpatterns = [
     path('safer', views.safer),
     path('prettyurldata/<thing>', views.prettyurldata),
     path('bounce', views.bounce),
+    path('icecream', views.Icecream.as_view()),
+    path('icecream/<flavor>', views.Icecream.as_view())
 ]    

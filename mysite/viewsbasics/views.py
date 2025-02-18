@@ -187,6 +187,14 @@ class Icecream(View):
         x = {'flavor':flavor}
         return render(request, 'viewsbasics/icecream.html',x)
 
+class Bmi(View):
+    def get(self, request,height,weight):
+        #flavor = request.GET.get('flavor')
+        h = float(height)
+        w = float(weight)
+        bmi = w / (h*h)
+        x = {'h':h,'w':w,'bmi':bmi}
+        return render(request, 'viewsbasics/bmi.html',x)
 def bounce(request):
     places = [
         'https://www.python.org/',

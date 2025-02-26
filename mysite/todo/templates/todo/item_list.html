@@ -6,13 +6,14 @@
 <h1>Chris's To Do List</h1>
 
 <main>
-<ul>
+<ol>
     {% for i in item_list %}
     <li>
         <a href="{% url 'todo:detail' i.id %}">{{ i.text }}</a>
-    </li>
+        <a href="{% url 'todo:update' i.id %}" class="button">Update</a>
+        <a href="{% url 'todo:delete' i.id %}" class="button">Delete<a>
     {% endfor %}
-</ul>
+</ol>
 
 <a href="{% url 'todo:add' %}">Add a new item</a>
 </main>

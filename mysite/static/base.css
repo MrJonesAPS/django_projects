@@ -21,3 +21,15 @@ main {
   grid-template-columns: 48vw 48vw;
   grid-template-rows: auto;
 }
+
+a.button {
+    padding: 1px 6px;
+    border: 1px outset buttonborder;
+    border-radius: 3px;
+    color: buttontext;
+    background-color: buttonface;
+    text-decoration: none;
+}
+li {
+    padding: 10px;
+}

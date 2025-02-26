@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<h1>Chris's To Do List</h1>
+
+<main>
+<ul>
+    {% for t in timeslot_list %}
+    <li>
+        <a href="{% url 'cosmo:timeslot_detail' t.id %}">{{ t.text }}</a>
+    </li>
+    {% endfor %}
+</ul>
+</main>
+    {% endblock %}

@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'cosmo.apps.CosmoConfig', 
     'todo.apps.TodoConfig',
     'polls.apps.PollsConfig',
     'viewsbasics.apps.ViewsbasicsConfig',
